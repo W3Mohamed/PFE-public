@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="icon" type="image/x-icon" href="img/logo_2.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+   
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <script src="js/script.js"></script>
+    <title>Accueil</title>
+    <style>
+        :root {
+          --noir: #010101;
+          --blanc: #ffffff;
+          --beige: #e5bd43;
+          --second: #fafafa;
+        }
+        @keyframes slideDown {
+            0% {
+            opacity: 0;
+            transform: translateY(-20px);
+            }
+            100% {
+            opacity: 1;
+            transform: translateY(0);
+            }
+        }
+
+        .animate-slideDown {
+            animation: slideDown 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="font-[Funnel Sans]">
+    <!--=========================navbar====================-->
+    <nav class="absolute top-0 left-0 z-50 w-full p-4 flex items-center justify-between lg:justify-around border-b border-[var(--second)]">
+        <div class="logo">
+            <img src="img/logo.png" alt="Hotel Roxal">
+        </div>
+        <div class="lg:hidden w-8 cursor-pointer navBtn">
+            <img src="icon/menu.png" alt="Menu">
+        </div>
+        <ul class="gap-8 text-lg hidden flex lg:flex absolute z-[9999] lg:static top-22 left-0 w-full lg:w-auto bg-[var(--noir)] lg:bg-transparent flex-col lg:flex-row items-center py-4 lg:py-0 navbar">
+            <li><a href="index.html" class="text-[var(--blanc)] uppercase duration-300 hover:text-[var(--beige)]">Accueil</a></li>
+            <li><a href="index.html#chambres" class="text-[var(--blanc)] uppercase duration-300 hover:text-[var(--beige)]">Chambres</a></li>
+            <li><a href="propos.html" class="text-[var(--blanc)] uppercase duration-300 hover:text-[var(--beige)]">A propos</a></li>
+            <li><a href="index.html#services" class="text-[var(--blanc)] uppercase duration-300 hover:text-[var(--beige)]">Services</a></li>
+            <li><a href="index.html#offres" class="text-[var(--blanc)] uppercase duration-300 hover:text-[var(--beige)]">Offres</a></li>
+            <li><a href="contact.html" class="text-[var(--blanc)] uppercase duration-300 hover:text-[var(--beige)]">Contactez-nous</a></li>
+        </ul>
+    </nav>
+    <!--=========================hero section====================-->
+    <section class="splide" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <section class="relative bg-[linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('img/slider_img01.jpg')] bg-center bg-cover h-screen">
+                        <div class="mt-8 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center flex items-center flex-col">
+                            <img src="icon/rating.png" alt="Hotel 5 étoiles">
+                            <h1 class="text-6xl font-semibold m-4">Bienvenue à l'Hôtel Roxal</h1>
+                            <p class="mt-4">Découvrez un havre de paix où luxe et confort se rencontrent pour créer une expérience inoubliable.</p>
+                            <a href="#chambres" class="bg-[var(--beige)] py-2 px-8 m-4 font-semibold rounded-sm tracking-wide duration-300 hover:bg-black">Voir les chambres</a>
+                        </div>
+                    </section>
+                </li>
+                <li class="splide__slide">
+                    <section class="relative bg-[linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('img/slider_img02.jpg')] bg-center bg-cover h-screen">
+                        <div class="mt-8 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center flex items-center flex-col">
+                            <img src="icon/rating.png" alt="Hotel 5 étoiles">
+                            <h1 class="text-6xl font-semibold m-4">Bien-être et Élégance</h1>
+                            <p class="mt-4">Profitez de services haut de gamme et d'un cadre exceptionnel pour un séjour mémorable.</p>
+                            <a href="index.html#contact" class="bg-[var(--beige)] py-2 px-8 m-4 font-semibold rounded-sm tracking-wide duration-300 hover:bg-black">Contactez-nous</a>
+                        </div>
+                    </section>
+                </li>
+                <li class="splide__slide">
+                    <section class="relative bg-[linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('img/slider_img03.jpg')] bg-center bg-cover h-screen">
+                        <div class="mt-8 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center flex items-center flex-col">
+                            <img src="icon/rating.png" alt="Hotel 5 étoiles">
+                            <h1 class="text-6xl font-semibold m-4">Votre Évasion Commence Ici</h1>
+                            <p class="mt-4">Réservez dès maintenant et profitez d'un séjour exceptionnel à l'Hôtel Roxal.</p>
+                            <a href="reservation.html" class="bg-[var(--beige)] py-2 px-8 m-4 font-semibold rounded-sm tracking-wide duration-300 hover:bg-black">Réservez votre séjour</a>
+                        </div>
+                    </section>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!--=========================Formulaire de Réservation====================-->
+    <div class="absolute inset-x-0 -mt-12 z-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto bg-white p-4 rounded-lg shadow-lg border border-gray-200">
+                <form class="flex flex-wrap md:flex-nowrap items-end gap-4">
+                    <!-- Date d'arrivée -->
+                    <div class="flex-1">
+                        <label for="checkin" class="block text-sm font-medium text-gray-700">Date d'Arrivée</label>
+                        <input type="date" id="checkin" name="checkin" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--beige)] focus:border-[var(--beige)]" required>
+                    </div>
+
+                    <!-- Date de départ -->
+                    <div class="flex-1">
+                        <label for="checkout" class="block text-sm font-medium text-gray-700">Date de Départ</label>
+                        <input type="date" id="checkout" name="checkout" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--beige)] focus:border-[var(--beige)]" required>
+                    </div>
+
+                    <!-- Nombre d'adultes -->
+                    <div class="flex-1">
+                        <label for="adults" class="block text-sm font-medium text-gray-700">Adultes</label>
+                        <select id="adults" name="adults" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--beige)] focus:border-[var(--beige)]" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+
+                    <!-- Nombre d'enfants -->
+                    <div class="flex-1">
+                        <label for="children" class="block text-sm font-medium text-gray-700">Enfants</label>
+                        <select id="children" name="children" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--beige)] focus:border-[var(--beige)]">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+
+                    <!-- Bouton de réservation -->
+                    <div class="flex-1">
+                        <button type="submit" class="w-full bg-[var(--beige)] text-white py-2 px-4 rounded-md font-semibold hover:bg-black duration-300">Réserver</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!--======================Presentation de l'hotel====================-->
+    <div class="presentation flex flex-col lg:flex-row mx-8 md:mx-16 my-24 relative">
+        <div class="flex-1">
+            <h3 class="text-xl text-[var(--beige)] font-semibold">Bienvenue à</h3>
+            <h1 class="my-4 text-4xl">Hôtel Luxe & Confort</h1>
+            <p class="mb-8">Découvrez un cadre élégant et raffiné au cœur de la ville. Profitez de chambres luxueuses, d’un service exceptionnel et
+                 d’une expérience inoubliable. Réservez dès maintenant pour un séjour unique !</p>
+            <a href="#chambre" class="bg-[var(--beige)] text-white p-4 rounded-4xl font-semibold tracking-wide hover:bg-black duration-300">Nos Chambres</a>
+            <!-- Section des drapeaux -->
+            <div class="mt-16">
+                <p class=" text-gray-600">Nous accueillons des clients du monde entier :</p>
+                <div class="my-8 flex flex-wrap">
+                    <img src="img/pays/france.png" class="my-2 mr-[2%] w-[10.5%] rounded-full" alt="france">
+                    <img src="img/pays/spain.png" class="my-2 mr-[2%] w-[10.5%] rounded-full" alt="spain">
+                    <img src="img/pays/italy.png" class="my-2 mr-[2%] w-[10.5%] rounded-full" alt="italy">
+                    <img src="img/pays/germany.png" class="my-2 mr-[2%] w-[10.5%] rounded-full" alt="germany">
+                    <img src="img/pays/russia.png" class="my-2 mr-[2%] w-[10.5%] rounded-full" alt="Russia">
+                    <img src="img/pays/united-states.png" class="my-2 mr-[2%] w-[10.5%] rounded-full" alt="">
+                    <img src="img/pays/thailand.png" class="my-2 mr-[2%] w-[10.5%] rounded-full" alt="thailand">
+                    <img src="img/pays/india.png" class="my-2 mr-[2%] w-[10.5%] rounded-full" alt="india">
+
+                    <img src="img/pays/turkey.png" class="my-2 mr-[2%] w-[10.5%] rounded-full" alt="turkey">
+                    <img src="img/pays/england.png" class="my-2 mr-[2%] w-[10.5%] rounded-full" alt="england">
+                    <img src="img/pays/morocco.png" class="my-2 mr-[2%] w-[10.5%] rounded-full" alt="morocco">
+                    <img src="img/pays/uae.png" class="my-2 mr-[2%] w-[10.5%] rounded-full" alt="uae">
+                    <img src="img/pays/egypte.png" class="my-2 mr-[2%] w-[10.5%] rounded-full" alt="egypte">
+                    <img src="img/pays/tunisie.png" class="my-2 mr-[2%] w-[10.5%] rounded-full" alt="tunisie">
+                    <img src="img/pays/saudi.png" class="my-2 mr-[2%] w-[10.5%] rounded-full" alt="saudi">
+                    <img src="img/pays/portugal.png" class="my-2 mr-[2%] w-[10.5%] rounded-full" alt="portugal">
+                </div>
+            </div>
+        </div>
+        <div class="flex-1 flex justify-center">
+            <div class="absolute w-24 h-24 bg-[var(--beige)] top-0 right-0 rounded-full blur-3xl"></div>
+            <img src="img/info.jpg" class="h-[500px] rounded-sm" alt="Hotel">
+        </div>
+    </div>
+
+    <!--======================Rooms Preview Section====================-->
+    <section id="chambres" class="mx-8 md:mx-16 my-24">
+        <h2 class="text-3xl md:text-6xl font-semibold text-center mb-8 text-[var(--noir)] uppercase animate-slideDown">Nos Chambres</h2>
+        <div class="flex items-center justify-center mb-12">
+            <img src="icon/decorated-pattern-2.svg" alt="Décoration" class="w-64">
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Room 1 -->
+            <div class="bg-white shadow-2xl rounded-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
+                <div class="relative">
+                    <!-- Image de la chambre -->
+                    <img src="img/chambres/pexels-heyho-6284232.jpg" alt="Chambre Standard" class="w-full h-64 object-cover">
+                    <!-- Icônes des équipements -->
+                    <div class="absolute bottom-4 left-4 flex space-x-2">
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/bed.png" alt="Lit" class="w-6 h-6">
+                        </div>
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/wifi.png" alt="Wi-Fi" class="w-6 h-6">
+                        </div>
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/tv.png" alt="TV" class="w-6 h-6">
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-2 text-[var(--noir)]">Chambre Standard</h3>
+                    <p class="text-gray-600 mb-4">Une chambre confortable avec tout le nécessaire pour un séjour agréable.</p>
+                    <div class="flex items-center justify-between">
+                        <p class="text-lg font-bold text-[var(--beige)]">€100 / nuit</p>
+                        <a href="detail.html" class="bg-[var(--beige)] text-white py-2 px-6 rounded-sm font-semibold hover:bg-black duration-300">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 2 -->
+            <div class="bg-white shadow-2xl rounded-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
+                <div class="relative">
+                    <img src="img/chambres/pexels-kadiravsarr-24877168.jpg" alt="Chambre Deluxe" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-4 left-4 flex space-x-2">
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/bed.png" alt="Lit" class="w-6 h-6">
+                        </div>
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/wifi.png" alt="Wi-Fi" class="w-6 h-6">
+                        </div>
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/tv.png" alt="TV" class="w-6 h-6">
+                        </div>
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/coffee.png" alt="Café" class="w-6 h-6">
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-2 text-[var(--noir)]">Chambre Deluxe</h3>
+                    <p class="text-gray-600 mb-4">Profitez d'un espace plus grand avec des équipements haut de gamme.</p>
+                    <div class="flex items-center justify-between">
+                        <p class="text-lg font-bold text-[var(--beige)]">€150 / nuit</p>
+                        <a href="detail.html" class="bg-[var(--beige)] text-white py-2 px-6 rounded-sm font-semibold hover:bg-black duration-300">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 3 -->
+            <div class="bg-white shadow-2xl rounded-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
+                <div class="relative">
+                    <img src="img/chambres/pexels-heyho-7535037.jpg" alt="Suite Présidentielle" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-4 left-4 flex space-x-2">
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/bed.png" alt="Lit" class="w-6 h-6">
+                        </div>
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/wifi.png" alt="Wi-Fi" class="w-6 h-6">
+                        </div>
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/tv.png" alt="TV" class="w-6 h-6">
+                        </div>
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/bathtub.png" alt="Baignoire" class="w-6 h-6">
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-2 text-[var(--noir)]">Suite Présidentielle</h3>
+                    <p class="text-gray-600 mb-4">Un luxe ultime avec une vue imprenable et des services exclusifs.</p>
+                    <div class="flex items-center justify-between">
+                        <p class="text-lg font-bold text-[var(--beige)]">€300 / nuit</p>
+                        <a href="detail.html" class="bg-[var(--beige)] text-white py-2 px-6 rounded-sm font-semibold hover:bg-black duration-300">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 4 -->
+            <div class="bg-white shadow-2xl rounded-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
+                <div class="relative">
+                    <img src="img/chambres/pexels-jvdm-1457845.jpg" alt="Suite Présidentielle" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-4 left-4 flex space-x-2">
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/bed.png" alt="Lit" class="w-6 h-6">
+                        </div>
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/wifi.png" alt="Wi-Fi" class="w-6 h-6">
+                        </div>
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/tv.png" alt="TV" class="w-6 h-6">
+                        </div>
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/bathtub.png" alt="Baignoire" class="w-6 h-6">
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-2 text-[var(--noir)]">Chambre Familiale</h3>
+                    <p class="text-gray-600 mb-4">Idéale pour les familles, avec un espace spacieux et des lits supplémentaires.</p>
+                    <div class="flex items-center justify-between">
+                        <p class="text-lg font-bold text-[var(--beige)]">€180 / nuit</p>
+                        <a href="detail.html" class="bg-[var(--beige)] text-white py-2 px-6 rounded-sm font-semibold hover:bg-black duration-300">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Room 5 -->
+            <div class="bg-white shadow-2xl rounded-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
+                <div class="relative">
+                    <img src="img/chambres/pexels-lucaluperto-19045887.jpg" alt="Chambre Vue Mer" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-4 left-4 flex space-x-2">
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/bed.png" alt="Lit" class="w-6 h-6">
+                        </div>
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/wifi.png" alt="Wi-Fi" class="w-6 h-6">
+                        </div>
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/tv.png" alt="TV" class="w-6 h-6">
+                        </div>
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/bathtub.png" alt="Baignoire" class="w-6 h-6">
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-2 text-[var(--noir)]">Chambre Vue Mer</h3>
+                    <p class="text-gray-600 mb-4">Profitez d'une vue magnifique sur la mer depuis votre chambre.</p>
+                    <div class="flex items-center justify-between">
+                        <p class="text-lg font-bold text-[var(--beige)]">€220 / nuit</p>
+                        <a href="detail.html" class="bg-[var(--beige)] text-white py-2 px-6 rounded-sm font-semibold hover:bg-black duration-300">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 6 -->
+            <div class="bg-white shadow-2xl rounded-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
+                <div class="relative">
+                    <img src="img/chambres/pexels-alexander-mass-748453803-27638171.jpg" alt="Chambre économique" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-4 left-4 flex space-x-2">
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/bed.png" alt="Lit" class="w-6 h-6">
+                        </div>
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/wifi.png" alt="Wi-Fi" class="w-6 h-6">
+                        </div>
+                        <div class="bg-[var(--beige)] p-2 rounded-full flex items-center justify-center shadow-md">
+                            <img src="icon/tv.png" alt="TV" class="w-6 h-6">
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-2 text-[var(--noir)]">Chambre Économique</h3>
+                    <p class="text-gray-600 mb-4">Une option économique sans compromis sur le confort.</p>
+                    <div class="flex items-center justify-between">
+                        <p class="text-lg font-bold text-[var(--beige)]">€80 / nuit</p>
+                        <a href="detail.html" class="bg-[var(--beige)] text-white py-2 px-6 rounded-sm font-semibold hover:bg-black duration-300">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--======================Included Services Section====================-->
+    <section id="services-inclus" class="mx-8 md:mx-16 my-24">
+        <h2 class="text-3xl md:text-6xl font-semibold text-center mb-8 text-[var(--noir)] uppercase animate-slideDown">Services Inclus</h2>
+        <div class="flex items-center justify-center mb-12">
+            <img src="icon/decorated-pattern-2.svg" alt="Décoration" class="w-64">
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Service 1: Wi-Fi Gratuit -->
+            <div class="bg-[var(--second)] p-8 rounded-lg text-center hover:shadow-lg transition-all duration-300">
+                <div class="flex justify-center mb-4">
+                    <img src="icon/wifi2.png" alt="Wi-Fi" class="w-12 h-12">
+                </div>
+                <h3 class="text-2xl font-semibold mb-2 text-[var(--noir)]">Wi-Fi Gratuit</h3>
+                <p class="text-gray-600">Profitez d'une connexion Wi-Fi haut débit gratuite dans tout l'hôtel.</p>
+            </div>
+
+            <!-- Service 2: Parking Gratuit -->
+            <div class="bg-[var(--second)] p-8 rounded-lg text-center hover:shadow-lg transition-all duration-300">
+                <div class="flex justify-center mb-4">
+                    <img src="icon/parking.png" alt="Parking" class="w-12 h-12">
+                </div>
+                <h3 class="text-2xl font-semibold mb-2 text-[var(--noir)]">Parking Gratuit</h3>
+                <p class="text-gray-600">Votre véhicule est en sécurité avec notre parking surveillé et gratuit.</p>
+            </div>
+
+            <!-- Service 3: Petit-Déjeuner -->
+            <div class="bg-[var(--second)] p-8 rounded-lg text-center hover:shadow-lg transition-all duration-300">
+                <div class="flex justify-center mb-4">
+                    <img src="icon/coffee2.png" alt="Petit-Déjeuner" class="w-12 h-12">
+                </div>
+                <h3 class="text-2xl font-semibold mb-2 text-[var(--noir)]">Petit-Déjeuner</h3>
+                <p class="text-gray-600">Commencez votre journée avec notre délicieux petit-déjeuner inclus.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--======================Additional Services Section====================-->
+    <section id="services-supplementaires" class="mx-8 md:mx-16 my-24">
+        <h2 class="text-3xl md:text-6xl font-semibold text-center mb-8 text-[var(--noir)] uppercase animate-slideDown">Services Supplémentaires</h2>
+        <div class="flex items-center justify-center mb-12">
+            <img src="icon/decorated-pattern-2.svg" alt="Décoration" class="w-64">
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1: Spa -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:scale-105">
+                <img src="img/services/spa.jpg" alt="Spa" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="icon/spa.png" alt="Spa" class="w-8 h-8 mr-2">
+                        <h3 class="text-2xl font-semibold text-[var(--noir)]">Spa & Bien-être</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Détendez-vous avec nos soins spa exclusifs et nos massages relaxants.</p>
+                    <p class="text-lg font-bold text-[var(--beige)]">À partir de €50</p>
+                </div>
+            </div>
+
+            <!-- Service 2: Pension Complète -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:scale-105">
+                <img src="img/services/pension.jpg" alt="Pension Complète" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="icon/food.png" alt="Pension Complète" class="w-8 h-8 mr-2">
+                        <h3 class="text-2xl font-semibold text-[var(--noir)]">Pension Complète</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Profitez de nos formules tout inclus avec petit-déjeuner, déjeuner et dîner.</p>
+                    <p class="text-lg font-bold text-[var(--beige)]">À partir de €80/jour</p>
+                </div>
+            </div>
+
+            <!-- Service 4: Salle de Sport Haut de Gamme -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:scale-105">
+                <img src="img/services/sport.jpg" alt="Spa" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="icon/sport.png" alt="Spa" class="w-8 h-8 mr-2">
+                        <h3 class="text-2xl font-semibold text-[var(--noir)]">Salle de Sport Haut de Gamme</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Maintenez votre routine fitness dans notre salle de sport entièrement équipée.</p>
+                    <p class="text-lg font-bold text-[var(--beige)]">À partir de €30</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--======================Avis Section====================-->
+    <section id="avis" class="mx-8 md:mx-16 my-24">
+        <h2 class="text-3xl md:text-6xl font-semibold text-center mb-8 text-[var(--noir)] uppercase">Avis Clients</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Avis 1 -->
+            <div class="bg-[var(--second)] p-8 rounded-lg">
+                <div class="flex items-center mb-4">
+                    <img src="img/client/avatar1.png" alt="Client 1" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-semibold">Jean Dupont</h3>
+                        <div class="flex space-x-1">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600">"Un séjour incroyable ! Le service est impeccable et les chambres sont magnifiques."</p>
+            </div>
+            <!-- Avis 2 -->
+            <div class="bg-[var(--second)] p-8 rounded-lg">
+                <div class="flex items-center mb-4">
+                    <img src="img/client/avatar2.png" alt="Client 2" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-semibold">Marie Leroy</h3>
+                        <div class="flex space-x-1">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600">"L'hôtel est parfaitement situé et le spa est un vrai bonheur. Je recommande !"</p>
+            </div>
+            <!-- Avis 3 -->
+            <div class="bg-[var(--second)] p-8 rounded-lg">
+                <div class="flex items-center mb-4">
+                    <img src="img/client/avatar3.png" alt="Client 3" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-semibold">Paul Martin</h3>
+                        <div class="flex space-x-1">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600">"Un cadre exceptionnel et un personnel très attentionné. À refaire !"</p>
+            </div>
+        </div>
+    </section>
+
+    <!--======================Map Section====================-->
+    <section id="contact" class="mx-8 md:mx-16 my-24">
+        <h2 class="text-3xl md:text-6xl font-semibold text-center mb-8 text-[var(--noir)] uppercase">Nous Trouver</h2>
+        <div class="h-96 w-full rounded-lg overflow-hidden">
+            <iframe    
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d679.1748984513242!2d0.08999663936695006!3d35.92939010306741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1282037ae1475b0f%3A0x4274fd67d4d2458f!2sAu%20nom%20de%20la%20rose%202!5e0!3m2!1sen!2sdz!4v1740655146514!5m2!1sen!2sdz"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <!--=========================Call-to-Action Bannière====================-->
+    <section class="bg-[var(--beige)] py-12">
+        <div class="container mx-auto px-4 text-center">
+            <!-- Titre avec emoji -->
+            <h2 class="text-3xl font-semibold text-white mb-4">
+                🤔 Vous avez des questions ?
+            </h2>
+
+            <!-- Texte avec emoji -->
+            <p class="text-lg text-white mb-8">
+                🎧 Nous sommes là pour vous aider. Contactez-nous dès maintenant !
+            </p>
+
+            <!-- Bouton avec emoji -->
+            <a href="contact.html" class="bg-white text-[var(--beige)] py-3 px-8 rounded-md font-semibold hover:bg-[var(--noir)] hover:text-white duration-300">
+                📩 Contactez-nous
+            </a>
+        </div>
+    </section>
+    <!--======================Footer Section====================-->
+    <footer class="bg-[var(--noir)] text-[var(--blanc)] py-12">
+        <div class="container mx-auto px-8 lg:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- About Section -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">À propos de nous</h3>
+                    <p class="text-gray-400">Découvrez un havre de paix où luxe et confort se rencontrent pour créer une expérience inoubliable.</p>
+                    <div class="mt-4">
+                        <img src="img/logo.png" alt="Hotel Roxal" class="w-24">
+                    </div>
+                </div>
+    
+                <!-- Quick Links Section -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-[var(--beige)] duration-300">Accueil</a></li>
+                        <li><a href="index.html#chambres" class="text-gray-400 hover:text-[var(--beige)] duration-300">Chambres</a></li>
+                        <li><a href="index.html#propos" class="text-gray-400 hover:text-[var(--beige)] duration-300">À propos</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-[var(--beige)] duration-300">Services</a></li>
+                        <li><a href="index.html#offres" class="text-gray-400 hover:text-[var(--beige)] duration-300">Offres</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-[var(--beige)] duration-300">Contactez-nous</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Information -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Contactez-nous</h3>
+                    <ul class="text-gray-400 space-y-2">
+                        <li>123 Rue de l'Hôtel, Ville</li>
+                        <li>+33 123 456 789</li>
+                        <li>info@hotelroxal.com</li>
+                    </ul>
+                    <div class="mt-4">
+                        <p class="text-gray-400">Suivez-nous :</p>
+                        <div class="flex space-x-4 mt-2">
+                            <a href="#" class="text-gray-400 hover:text-[var(--beige)] duration-300">
+                                <img src="icon/facebook.png" alt="Facebook" class="w-6 h-6">
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-[var(--beige)] duration-300">
+                                <img src="icon/twitter.png" alt="Twitter" class="w-6 h-6">
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-[var(--beige)] duration-300">
+                                <img src="icon/instagram.png" alt="Instagram" class="w-6 h-6">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Newsletter Section -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Abonnez-vous pour recevoir nos offres exclusives.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Votre email" class="p-2 rounded-l-sm bg-gray-700 text-white w-full">
+                        <button type="submit" class="bg-[var(--beige)] text-white px-4 rounded-r-sm hover:bg-black duration-300">S'abonner</button>
+                    </form>
+                </div>
+            </div>
+    
+            <!-- Copyright Section -->
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Hôtel Roxal. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function() {
+            var splide = new Splide( '.splide',{
+                type : 'loop'
+            } );
+            splide.mount();
+        });
+    </script>
+</body>
+</html>
