@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - Hôtel Roxal</title>
+    <!-- Tailwind CSS -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --noir: #010101;
+            --blanc: #ffffff;
+            --beige: #e5bd43;
+            --second: #fafafa;
+        }
+    </style>
+</head>
+<body class="font-[Funnel Sans] bg-[var(--second)]">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full bg-[var(--noir)] p-4 text-white flex justify-between items-center">
+        <a href="index.html"><img src="img/logo.png" alt="Hotel Roxal" class="w-24"></a>
+        <a href="reservation.html" class="bg-[var(--beige)] text-white py-2 px-6 rounded hover:bg-black">Finaliser la réservation</a>
+    </nav>
+
+    <!-- Contenu du panier -->
+    <div class="container mx-auto mt-20 p-6 bg-white rounded shadow-lg">
+        <h1 class="text-3xl font-semibold text-center mb-6">Votre Panier</h1>
+        <div id="cart-items" class="space-y-4">
+            <!-- Exemple de chambre ajoutée -->
+            <div class='p-4 border rounded shadow flex justify-between items-center'>
+                <div>
+                    <h2 class='text-xl font-semibold'>Chambre Standard (3 nuits)</h2>
+                    <p class='text-gray-600'>Prix : 300€</p>
+                    <ul class='text-sm text-gray-500'>
+                        <li>Petit-déjeuner (+30€)</li>
+                        <li>Spa (+50€)</li>
+                    </ul>
+                    <button class='text-red-500 hover:underline'>Supprimer</button>
+                </div>
+                <p class='text-lg font-bold'>380€</p>
+            </div>
+            
+            <div class='p-4 border rounded shadow flex justify-between items-center'>
+                <div>
+                    <h2 class='text-xl font-semibold'>Suite Présidentielle (2 nuits)</h2>
+                    <p class='text-gray-600'>Prix : 600€</p>
+                    <ul class='text-sm text-gray-500'>
+                        <li>Navette aéroport (+20€)</li>
+                    </ul>
+                    <button class='text-red-500 hover:underline'>Supprimer</button>
+                </div>
+                <p class='text-lg font-bold'>620€</p>
+            </div>
+        </div>
+        <hr class="my-6">
+        
+        <!-- Total et actions -->
+        <div class="flex justify-between items-center">
+            <p class="text-xl font-bold">Total : <span id="total-price">1000€</span></p>
+            <div>
+                <a href="index.html#chambres" class="bg-gray-400 text-white py-2 px-6 rounded hover:bg-gray-600">Retour aux chambres</a>
+                <a href="reservation.html" class="bg-[var(--beige)] text-white py-2 px-6 rounded hover:bg-black">Finaliser la réservation</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
