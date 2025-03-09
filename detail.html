@@ -1,57 +1,50 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails de la Chambre - Hôtel Roxal</title>
+    <!-- Tailwind CSS -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="icon" type="image/x-icon" href="img/logo_2.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-   
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
-  
-    <script src="js/script.js"></script>
-    <title>Chambre Standard - Hôtel Roxal</title>
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Votre CSS personnalisé -->
     <style>
         :root {
-          --noir: #010101;
-          --blanc: #ffffff;
-          --beige: #e5bd43;
-          --second: #fafafa;
+            --noir: #010101;
+            --blanc: #ffffff;
+            --beige: #e5bd43;
+            --second: #fafafa;
         }
         @keyframes slideDown {
             0% {
-            opacity: 0;
-            transform: translateY(-20px);
+                opacity: 0;
+                transform: translateY(-20px);
             }
             100% {
-            opacity: 1;
-            transform: translateY(0);
+                opacity: 1;
+                transform: translateY(0);
             }
         }
-
         .animate-slideDown {
             animation: slideDown 0.3s ease-out;
         }
     </style>
 </head>
 <body class="font-[Funnel Sans]">
-    <!--=========================navbar====================-->
+    <!--=========================Navbar====================-->
     <nav class="fixed top-0 left-0 z-50 w-full p-4 bg-[var(--noir)] bg-opacity-90 backdrop-blur-sm border-b border-[var(--second)]">
         <div class="container mx-auto flex items-center justify-between lg:justify-around">
             <!-- Logo -->
             <div class="logo">
                 <img src="img/logo.png" alt="Hotel Roxal" class="w-24 hover:scale-105 transition-transform duration-300">
             </div>
-    
+
             <!-- Menu pour mobile -->
             <div class="lg:hidden w-8 cursor-pointer navBtn">
                 <img src="icon/menu.png" alt="Menu" class="w-full hover:rotate-90 transition-transform duration-300">
             </div>
-    
+
             <!-- Liens de navigation -->
             <ul class="hidden lg:flex items-center gap-8 text-lg">
                 <li>
@@ -61,7 +54,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="index.html#chambres" class="text-[var(--blanc)] uppercase hover:text-[var(--beige)] transition duration-300 relative group">
+                    <a href="chambres.html" class="text-[var(--blanc)] uppercase hover:text-[var(--beige)] transition duration-300 relative group">
                         Chambres
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--beige)] transition-all duration-300 group-hover:w-full"></span>
                     </a>
@@ -91,13 +84,13 @@
                     </a>
                 </li>
             </ul>
-    
+
             <!-- Bouton de réservation -->
-            <a href="reservation.html" class="hidden lg:block bg-[var(--beige)] text-white py-2 px-6 rounded-sm font-semibold hover:bg-black hover:scale-105 transition duration-300">
-                Réserver
+            <a href="panier.html" class="hidden lg:block bg-[var(--beige)] text-white py-2 px-6 rounded-sm font-semibold hover:bg-black hover:scale-105 transition duration-300">
+                Panier
             </a>
         </div>
-    
+
         <!-- Menu mobile (dépliant) -->
         <ul class="lg:hidden hidden flex-col bg-[var(--noir)] bg-opacity-90 backdrop-blur-sm mt-4 p-4 space-y-4 navbar animate-slideDown">
             <li>
@@ -106,12 +99,12 @@
                 </a>
             </li>
             <li>
-                <a href="index.html#chambres" class="text-[var(--blanc)] uppercase hover:text-[var(--beige)] transition duration-300">
+                <a href="chambres.html" class="text-[var(--blanc)] uppercase hover:text-[var(--beige)] transition duration-300">
                     Chambres
                 </a>
             </li>
             <li>
-                <a href="about.html" class="text-[var(--blanc)] uppercase hover:text-[var(--beige)] transition duration-300">
+                <a href="propos.html" class="text-[var(--blanc)] uppercase hover:text-[var(--beige)] transition duration-300">
                     À propos
                 </a>
             </li>
@@ -126,129 +119,99 @@
                 </a>
             </li>
             <li>
-                <a href="index.html#contact" class="text-[var(--blanc)] uppercase hover:text-[var(--beige)] transition duration-300">
+                <a href="contact.html" class="text-[var(--blanc)] uppercase hover:text-[var(--beige)] transition duration-300">
                     Contactez-nous
                 </a>
             </li>
             <li>
-                <a href="reservation.html" class="bg-[var(--beige)] text-white py-2 px-6 rounded-sm font-semibold hover:bg-black transition duration-300 text-center">
-                    Réserver
+                <a href="panier.html" class="bg-[var(--beige)] text-white py-2 px-6 rounded-sm font-semibold hover:bg-black transition duration-300 text-center">
+                    Panier
                 </a>
             </li>
         </ul>
     </nav>
 
-    <!--=========================Hero Section====================-->
-    <section class="relative bg-[linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('img/chambres/pexels-heyho-6284232.jpg')] bg-center bg-cover h-screen flex items-center justify-center">
-        <div class="text-center text-white">
-            <h1 class="text-4xl md:text-6xl font-semibold mb-4">Chambre Standard</h1>
-            <p class="text-xl md:text-2xl max-w-2xl mx-auto">
-                Une chambre confortable avec tout le nécessaire pour un séjour agréable.
-            </p>
-            <a href="#details" class="bg-[var(--beige)] text-white py-3 px-8 mt-8 inline-block rounded-sm font-semibold hover:bg-black duration-300">
-                Voir les détails
-            </a>
-        </div>
-    </section>
-
-    <!--=========================Details Section====================-->
-    <section id="details" class="mx-8 md:mx-16 my-24">
-        <h2 class="text-3xl md:text-6xl font-semibold text-center mb-8 text-[var(--noir)] uppercase animate-slideDown">Détails de la Chambre</h2>
-        <div class="flex items-center justify-center mb-12">
-            <img src="icon/decorated-pattern-2.svg" alt="Décoration" class="w-64">
-        </div>
-
-        <!-- Grille avec texte et image -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <!-- Image avec effet de bordure -->
-            <div class="relative group">
-                <img src="img/chambres/pexels-heyho-6284232.jpg" alt="Chambre Standard" class="w-full h-96 object-cover rounded-lg shadow-lg transform transition-transform duration-500 group-hover:scale-105">
-            </div>
-
-            <!-- Texte et bouton -->
-            <div class="space-y-6">
-                <h3 class="text-2xl font-semibold text-[var(--beige)]">Chambre Standard</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    La Chambre Standard offre un espace confortable et élégant, parfait pour un séjour détendu. Elle comprend un lit double, une salle de bain privée, et tout le nécessaire pour un séjour agréable.
-                </p>
-                <p class="text-gray-600 leading-relaxed">
-                    Profitez d'une ambiance chaleureuse et d'un service attentionné pour rendre votre séjour inoubliable.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="reservation.html" class="bg-[var(--beige)] text-white py-3 px-8 rounded-sm font-semibold hover:bg-black duration-300">
-                        Réserver maintenant
-                    </a>
-                    <a href="panier.html" class="bg-transparent border border-[var(--beige)] text-[var(--beige)] py-3 px-8 rounded-sm font-semibold hover:bg-[var(--beige)] hover:text-white duration-300">
-                        Ajouter au panier
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section des équipements -->
-        <div class="mt-24">
-            <h3 class="text-3xl font-semibold text-center mb-8 text-[var(--noir)]">Équipements</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Équipement 1 -->
-                <div class="bg-[var(--second)] p-6 rounded-lg text-center hover:shadow-lg transition-all duration-300">
-                    <div class="bg-[var(--beige)] p-3 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                        <img src="icon/bed.png" alt="Lit" class="w-8 h-8">
-                    </div>
-                    <p class="text-gray-600">Lit double confortable</p>
-                </div>
-                <!-- Équipement 2 -->
-                <div class="bg-[var(--second)] p-6 rounded-lg text-center hover:shadow-lg transition-all duration-300">
-                    <div class="bg-[var(--beige)] p-3 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                        <img src="icon/wifi.png" alt="Wi-Fi" class="w-8 h-8">
-                    </div>
-                    <p class="text-gray-600">Wi-Fi gratuit</p>
-                </div>
-                <!-- Équipement 3 -->
-                <div class="bg-[var(--second)] p-6 rounded-lg text-center hover:shadow-lg transition-all duration-300">
-                    <div class="bg-[var(--beige)] p-3 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                        <img src="icon/tv.png" alt="TV" class="w-8 h-8">
-                    </div>
-                    <p class="text-gray-600">Télévision à écran plat</p>
-                </div>
-                <!-- Équipement 4 -->
-                <div class="bg-[var(--second)] p-6 rounded-lg text-center hover:shadow-lg transition-all duration-300">
-                    <div class="bg-[var(--beige)] p-3 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                        <img src="icon/bathtub.png" alt="Salle de bain" class="w-8 h-8">
-                    </div>
-                    <p class="text-gray-600">Salle de bain privée</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--=========================Gallery Section====================-->
+    <!--=========================Détails de la Chambre====================-->
     <section class="mx-8 md:mx-16 my-24">
-        <h2 class="text-3xl md:text-6xl font-semibold text-center mb-8 text-[var(--noir)] uppercase animate-slideDown">Galerie de la Chambre</h2>
+        <!-- Titre de la section -->
+        <h2 class="text-3xl md:text-6xl font-semibold text-center mb-8 text-[var(--noir)] uppercase animate-slideDown">
+            Détails de la Chambre
+        </h2>
+
+        <!-- Décoration (motif) -->
         <div class="flex items-center justify-center mb-12">
             <img src="icon/decorated-pattern-2.svg" alt="Décoration" class="w-64">
         </div>
 
-        <!-- Carrousel d'images -->
-        <div class="splide" aria-label="Galerie de la Chambre Standard">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        <img src="img/chambres/pexels-alexander-mass-748453803-27638171.jpg" alt="Chambre Standard" class="w-full h-96 object-cover rounded-lg">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="img/chambres/pexels-jvdm-1457845.jpg" alt="Chambre Standard" class="w-full h-96 object-cover rounded-lg">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="img/chambres/pexels-kadiravsarr-24877168.jpg" alt="Chambre Standard" class="w-full h-96 object-cover rounded-lg">
-                    </li>
-                    <li class="splide__slide">
-                        <img src="img/chambres/pexels-lucaluperto-19045887.jpg" alt="Chambre Standard" class="w-full h-96 object-cover rounded-lg">
-                    </li>
-                </ul>
+        <!-- Contenu de la page -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Galerie d'images -->
+            <div class="space-y-4">
+                <img src="img/chambres/pexels-heyho-6284232.jpg" alt="Chambre Standard" class="w-full h-96 object-cover rounded-lg">
+                <div class="grid grid-cols-3 gap-4">
+                    <img src="img/chambres/pexels-alexander-mass-748453803-27638171.jpg" alt="Chambre Standard" class="w-full h-32 object-cover rounded-lg">
+                    <img src="img/chambres/pexels-heyho-7535037.jpg" alt="Chambre Standard" class="w-full h-32 object-cover rounded-lg">
+                    <img src="img/chambres/pexels-kadiravsarr-24877168.jpg" alt="Chambre Standard" class="w-full h-32 object-cover rounded-lg">
+                </div>
+            </div>
+
+            <!-- Détails de la chambre -->
+            <div class="space-y-6">
+                <h3 class="text-4xl font-semibold text-[var(--noir)]">Chambre Standard</h3>
+                <p class="text-gray-600">Une chambre confortable avec tout le nécessaire pour un séjour agréable. Profitez d'un lit double, d'une salle de bain privée, d'une télévision et d'une connexion Wi-Fi gratuite.</p>
+                <p class="text-2xl font-bold text-[var(--beige)]">€100 / nuit</p>
+
+                <!-- Équipements inclus -->
+                <div class="space-y-4">
+                    <h4 class="text-xl font-semibold text-[var(--noir)]">Équipements inclus :</h4>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-wifi text-[var(--beige)] mr-2"></i>
+                            Wi-Fi gratuit
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-tv text-[var(--beige)] mr-2"></i>
+                            Télévision
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-bed text-[var(--beige)] mr-2"></i>
+                            Lit double
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-bath text-[var(--beige)] mr-2"></i>
+                            Salle de bain privée
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services supplémentaires -->
+                <div class="space-y-4">
+                    <h4 class="text-xl font-semibold text-[var(--noir)]">Services supplémentaires :</h4>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center justify-between">
+                            <span>Petit-déjeuner (€10/jour)</span>
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-[var(--beige)]">
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>Accès au spa (€20/jour)</span>
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-[var(--beige)]">
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>Service de chambre 24/7 (€15/jour)</span>
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-[var(--beige)]">
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Bouton "Ajouter au panier" -->
+                <a href="panier.html" class="bg-[var(--beige)] text-white py-3 px-8 rounded-md font-semibold hover:bg-black duration-300 block text-center">
+                    Ajouter au panier
+                </a>
             </div>
         </div>
     </section>
-    <!--=========================Footer Section====================-->
+
+    <!--=========================Footer====================-->
     <footer class="bg-[var(--noir)] text-[var(--blanc)] py-12">
         <div class="container mx-auto px-8 lg:px-16">
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -260,20 +223,20 @@
                         <img src="img/logo.png" alt="Hotel Roxal" class="w-24">
                     </div>
                 </div>
-    
+
                 <!-- Quick Links Section -->
                 <div class="mb-8">
                     <h3 class="text-xl font-semibold mb-4">Liens rapides</h3>
                     <ul class="space-y-2">
                         <li><a href="index.html" class="text-gray-400 hover:text-[var(--beige)] duration-300">Accueil</a></li>
-                        <li><a href="index.html#chambres" class="text-gray-400 hover:text-[var(--beige)] duration-300">Chambres</a></li>
-                        <li><a href="about.html" class="text-gray-400 hover:text-[var(--beige)] duration-300">À propos</a></li>
+                        <li><a href="chambres.html" class="text-gray-400 hover:text-[var(--beige)] duration-300">Chambres</a></li>
+                        <li><a href="propos.html" class="text-gray-400 hover:text-[var(--beige)] duration-300">À propos</a></li>
                         <li><a href="index.html#services" class="text-gray-400 hover:text-[var(--beige)] duration-300">Services</a></li>
                         <li><a href="index.html#offres" class="text-gray-400 hover:text-[var(--beige)] duration-300">Offres</a></li>
-                        <li><a href="index.html#contact" class="text-gray-400 hover:text-[var(--beige)] duration-300">Contactez-nous</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-[var(--beige)] duration-300">Contactez-nous</a></li>
                     </ul>
                 </div>
-    
+
                 <!-- Contact Information -->
                 <div class="mb-8">
                     <h3 class="text-xl font-semibold mb-4">Contactez-nous</h3>
@@ -297,7 +260,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Newsletter Section -->
                 <div class="mb-8">
                     <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
@@ -308,50 +271,12 @@
                     </form>
                 </div>
             </div>
-    
+
             <!-- Copyright Section -->
             <div class="border-t border-gray-700 mt-8 pt-8 text-center">
                 <p class="text-gray-400">&copy; 2025 Hôtel Roxal. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var splide = new Splide('.splide', {
-                type: 'loop', // Permet de faire défiler les images en boucle
-                perPage: 1, // Nombre d'images affichées à la fois
-                autoplay: true, // Défilement automatique
-                interval: 3000, // Intervalle de défilement en millisecondes
-                pauseOnHover: true, // Mettre en pause au survol
-                arrows: true, // Afficher les flèches de navigation
-                pagination: true, // Afficher les points de pagination
-                speed: 500, // Vitesse de transition en millisecondes
-            });
-            splide.mount();
-        });
-    </script>
-    <!-- <h1>test</h1> -->
 </body>
 </html>
-<!--
-RewriteBase /
-
-Options -MultiViews
-RewriteEngine On
-
-# Supprimer l'extension .php dans l'URL
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^([^./]+)$ $1.php [L]
-
-# Rediriger automatiquement les URLs avec .php vers l'URL sans .php (SEO friendly)
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+([^.]+)\.php [NC]
-RewriteRule ^(.+)\.php$ /$1 [R=301,L]
-
-# Assurer que les fichiers existent avant d'ajouter .php
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.+)$ $1.php [L]
-
--->
