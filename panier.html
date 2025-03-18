@@ -200,53 +200,55 @@
 
             <!-- Récapitulatif et Paiement -->
             <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h2 class="text-3xl font-semibold mb-6 text-[var(--noir)]">Récapitulatif</h2>
-                <div class="space-y-4">
-                    <div class="flex justify-between">
-                        <p>Chambre Standard (3 nuits)</p>
-                        <p class="font-bold">300€</p>
+                <form action="reservation.html">
+                    <h2 class="text-3xl font-semibold mb-6 text-[var(--noir)]">Récapitulatif</h2>
+                    <div class="space-y-4">
+                        <div class="flex justify-between">
+                            <p>Chambre Standard (3 nuits)</p>
+                            <p class="font-bold">300€</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <p>Suite Présidentielle (2 nuits)</p>
+                            <p class="font-bold">600€</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <p>Services supplémentaires</p>
+                            <p class="font-bold">70€</p>
+                        </div>
+                        <hr class="my-4">
+                        <div class="flex justify-between">
+                            <p class="font-bold">Total</p>
+                            <p class="text-xl font-bold text-[var(--beige)]">970€</p>
+                        </div>
                     </div>
-                    <div class="flex justify-between">
-                        <p>Suite Présidentielle (2 nuits)</p>
-                        <p class="font-bold">600€</p>
-                    </div>
-                    <div class="flex justify-between">
-                        <p>Services supplémentaires</p>
-                        <p class="font-bold">70€</p>
-                    </div>
-                    <hr class="my-4">
-                    <div class="flex justify-between">
-                        <p class="font-bold">Total</p>
-                        <p class="text-xl font-bold text-[var(--beige)]">970€</p>
-                    </div>
-                </div>
 
-                <!-- Code promo -->
-                <div class="mt-6">
-                    <input type="text" placeholder="Code promo" class="w-full p-2 border rounded">
-                    <button class="w-full mt-2 bg-[var(--beige)] text-white py-2 rounded hover:bg-black">Appliquer</button>
-                </div>
-
-                <!-- Mode de paiement -->
-                <div class="mt-6">
-                    <h3 class="text-xl font-semibold mb-4">Mode de paiement</h3>
-                    <div class="space-y-2">
-                        <label class="flex items-center gap-2">
-                            <input type="radio" name="payment" checked> Carte Bancaire
-                        </label>
-                        <label class="flex items-center gap-2">
-                            <input type="radio" name="payment"> PayPal
-                        </label>
-                        <label class="flex items-center gap-2">
-                            <input type="radio" name="payment"> Payer à l’arrivée
-                        </label>
+                    <!-- Code promo -->
+                    <div class="mt-6">
+                        <input type="text" placeholder="Code promo" class="w-full p-2 border rounded">
+                        <button class="w-full mt-2 bg-[var(--beige)] text-white py-2 rounded hover:bg-black">Appliquer</button>
                     </div>
-                </div>
 
-                <!-- Bouton de finalisation -->
-                <button class="w-full mt-6 bg-green-500 text-white py-2 rounded hover:bg-green-700">
-                    Finaliser la réservation
-                </button>
+                    <!-- Mode de paiement -->
+                    <div class="mt-6">
+                        <h3 class="text-xl font-semibold mb-4">Mode de paiement</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-2">
+                                <input type="radio" name="payment" checked> Carte Bancaire
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="radio" name="payment"> PayPal
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input type="radio" name="payment"> Payer à l’arrivée
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Bouton de finalisation -->
+                    <button class="w-full mt-6 bg-green-500 text-white py-2 rounded hover:bg-green-700">
+                        Finaliser la réservation
+                    </button>
+                </form>
             </div>
         </div>
     </section>
